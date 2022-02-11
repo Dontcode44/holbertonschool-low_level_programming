@@ -6,17 +6,17 @@
  * Return: Always 0 (Success)
  */
 
-int main() {
+int main()
+{
 	int a;
-	float b;
-	double c;
-	char d;
-	long int e;
-
-	printf("Size of int: %zu bytes\n", sizeof(a));
-	printf("Size of float: %zu bytes\n", sizeof(b));
-	printf("Size of double: %zu bytes\n", sizeof(c));
-	printf("Size of char: %zu byte\n", sizeof(d));
-	printf("Size of long int: %zu bytes\n", sizeof(e));
-	return 0;
+	char b
+	long int c;
+	long long int d;
+	float e;
+	printf("Size of a char: %lu byte(s)\n", (unsigned long)sizeof(d));
+	printf("Size of an int: %lu byte(s)\n", (unsigned long)sizeof(a));
+	printf("Size of a long int: %lu byte(s)\n", (unsigned long)sizeof(b));
+	printf("Size of a long long int: %lu byte(s)\n", (unsigned long)sizeof(c));
+	printf("Size of a float: %lu byte(s)\n", (unsigned long)sizeof(f));
+	return (0);
 }
