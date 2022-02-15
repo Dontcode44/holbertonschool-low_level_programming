@@ -1,4 +1,6 @@
 #include "main.h"
+#include <stdlib.h>
+#include <math.h>
 
 /**
  * _abs - Computes the absolute value
@@ -13,5 +15,5 @@ int _abs(int ab)
 	if (ab >= 0)
 		return (ab);
 	else
-		return (ab * -1);
+		return (ab * ab);
 	}
