@@ -9,6 +9,7 @@
  */
 
 int print_sign(int n)
+
 {
 	int sing;
 	if (n > 0)
