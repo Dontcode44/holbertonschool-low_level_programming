@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * void jack_bauer - Print every minute of the day
+ * jack_bauer - Print every minute of the day
  * @h, m: Variable hour and minut
  * Description: Tohis function prints the time day
  * Return - Success
