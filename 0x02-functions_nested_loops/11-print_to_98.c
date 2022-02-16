@@ -1,18 +1,36 @@
+#include <stdio.h>
 #include "main.h"
+
 /**
  * print_to_98 - check
  * @n: variable integer
- * Description: Print the numbers up to 98
+ * Description: Print up to the number 98
  * Return: Success!
  */
 void print_to_98(int n)
 {
-	if(n <= 98)
+	if (n <= 98)
 	{
-		for (n = n; n <= 97; n++)
-			printf("%d, ", n);
+		for (; n <= 98; n++)
+		{
+			printf("%d", n);
+
+			if (n == 98)
+				continue;
+			printf(", ");
+		}
+		printf("\n");
 	}
 	else
-		for(n = n; n > 98; n--)
-			printf("%d, " n);
+	{
+		for (; n >= 98; n--)
+		{
+			printf("%d", n);
+
+			if (n == 98)
+				continue;
+			printf(", ");
+		}
+		printf("\n");
+	}
 }
