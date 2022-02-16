@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * add - Adds two integers and returns the result.
  *@a: Integer a
@@ -7,4 +8,6 @@
  */
 
 int add(int a, int b)
+{
 	return (a + b);
+}
