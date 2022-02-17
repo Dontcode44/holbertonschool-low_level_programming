@@ -1,10 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-
 /**
- * main - Entry point
- *
+ * positive_or_negative - This function prints if positive or negative
+ * @i: This is the variable
  * Return: Always 0 (Success)
  */
 void positive_or_negative(int i)
