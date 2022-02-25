@@ -1,22 +1,32 @@
 #include "main.h"
 
 /**
- * _strchr - locates a character in a string
- * @s: string to check
- * @c: character to check for
- *
- * Return: pointer to spot in s with c or null
+ * _strncpy - a function that copys the strings.
+ * @dest: an input string
+ * @src: an input string
+ * @n: an input integer
+ * Return: A pointer to the resulting string
  */
-char *_strchr(char *s, char c)
+char *_strncpy(char *dest, char *src, int n)
 {
-	int i;
+	int srclen = 0, i = 0;
+	char *temp = dest, *start = src;
 
-	for (i = 0; *(s + i); i++)
+	while (*src)
 	{
-		if (*(s + i) == c)
-			return (s + i);
+		srclen++;
+		src++;
 	}
-	if (*(s + i) == c)
-		return (s + i);
-	return (0);
+
+	srclen++;
+
+	if (n > srclen)
+		n = srclen;
+
+	src = start;
+
+	for (; i < n; i++)
+		*dest++ = *src++;
+
+	return (temp);
 }
