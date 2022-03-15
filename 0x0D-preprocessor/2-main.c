@@ -1,12 +1,11 @@
 #include <stdio.h>
 /**
  * main - Program that prints the File name
- * Description: A program that prints the name of the file it was compiled from
+ * Description: Prints the file name it was compiled from
  * Return: Success!
  */
-int main()
+int main(void)
 {
    printf("%s",__FILE__);
-
    return(0);
 }
