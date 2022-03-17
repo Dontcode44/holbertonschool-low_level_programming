@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * ind_index - Function that searches for an integer.
+ * int_index - Function that searches for an integer.
  * @array: Array elements
  * @size: Array size
  * @cmp: Pointer to function
@@ -10,17 +10,16 @@
  */
 int int_index(int *array, int size, int (*cmp)(int))
 {
-	int i;
+	int a;
 
-	if (size >= 0 && array != NULL && cmp != NULL)
-	{
-		for (i = 0; i < size; i++)
-		{
-			if (cmp(array[i]) != 0)
-			{
-				return (i);
-			}
-		}
-	}
+	if (array == NULL)
+		return (-1);
+
+	if (size <= 0)
+		return (-1);
+
+	for (a = 0; a < size; a++)
+		if (cmp(array[a]) != 0)
+			return (a);
 	return (-1);
 }
