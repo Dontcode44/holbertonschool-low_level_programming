@@ -11,10 +11,10 @@
 */
 int main(int argc, char *argv[])
 {
-	int n1, n2, result;
-	int (*p)(int, int);
+	int (*ptr)(int, int);
+	int n1, n2;
 
-	if (argc < 4 || argc > 4)
+	if (argc != 4)
 	{
 		printf("Error\n");
 		exit(98);
@@ -23,15 +23,13 @@ int main(int argc, char *argv[])
 	n1 = atoi(argv[1]);
 	n2 = atoi(argv[3]);
 
-	p = get_op_func(argv[2]);
+	ptr = get_op_func(argv[2]);
 
-	if (p == NULL)
-	{	
+	if (ptr == NULL)
+	{
 		printf("Error\n");
 		exit(99);
 	}
-	result = p(n1, n2);
-
-	printf("%d\n", result);
+	printf("%d\n", ptr(n1, n2));
 	return (0);
 }

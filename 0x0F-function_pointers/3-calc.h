@@ -1,12 +1,15 @@
-#ifndef CALC_H
-#define CALC_H
+#ifndef CALCULATOR
+#define CALCULATOR
+
+#include <stddef.h>
 
 /**
- * struct op - Struct op
- *
- * @op: Pointer
- * @f: Function
+ * get_op_func - Function that selects the correct function
+ * to perform the operation asked by the user
+ * @s: The operator
+ * Return: Array ops on position i
  */
+
 typedef struct op
 {
 	char *op;
@@ -18,5 +21,5 @@ int op_sub(int a, int b);
 int op_mul(int a, int b);
 int op_div(int a, int b);
 int op_mod(int a, int b);
-
+int (*get_op_func(char *s))(int, int);
 #endif

@@ -1,13 +1,13 @@
-#include <stdio.h>
 #include "3-calc.h"
-#include <stdlib.h>
+#include <stddef.h>
 
 /**
- * get_op_func - check if the operator is valid
- * @s: value input operator
- *
- * Return: 0 if false, something else otherwise.
+ * get_op_func - function that selects the correct function
+ * to perform the operation asked by the user.
+ * @s: The operator
+ * Return: Pointer array function ops
  */
+
 int (*get_op_func(char *s))(int, int)
 {
 	op_t ops[] = {
@@ -19,13 +19,13 @@ int (*get_op_func(char *s))(int, int)
 		{NULL, NULL}};
 	int i;
 
-	i = 0;
-	while (i < 6)
+	while (ops[i].op != NULL)
 	{
-		if (ops[i].op[0] == s[0])
-			return (ops[i].f);
+		if (strcmp(s, ops[i].op) == 0)
+		{
+			break;
+		}
 		i++;
 	}
-	printf("Error\n");
-	exit(99);
+	return (ops[i].f);
 }
