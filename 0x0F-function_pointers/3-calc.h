@@ -1,7 +1,10 @@
 #ifndef CALCULATOR
 #define CALCULATOR
 
+#include <stdio.h>
+#include <stdlib.h>
 #include <stddef.h>
+#include <string.h>
 
 /**
  * get_op_func - Function that selects the correct function
