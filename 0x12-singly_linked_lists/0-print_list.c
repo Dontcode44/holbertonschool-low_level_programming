@@ -8,20 +8,18 @@
  */
 size_t list_len(const list_t *h)
 {
-	unsigned int node = 0;
+	unsigned int nodes = 0;
 
 	while (h)
 	{
+		printf("[%u] ", h->len);
 		if (h->str == NULL)
-		{
-			printf("[0] (nil)\n");
-		}
+			printf("(nil)\n");
 		else
-		{
-			printf("[%d] %s\n", h->len, h->str);
-		}
-		node++;
+			printf("%s\n", h->str);
+
 		h = h->next;
+		nodes++;
 	}
-	return (node);
+	return (nodes);
 }
