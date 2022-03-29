@@ -19,7 +19,7 @@ list_t *add_node(list_t **head, const char *str)
 		return(NULL);
 	}
 	for (; str[a]; a++);
-	bandido->str = strdup[str];
+	bandido->str = strdup(str);
 	bandido->len = a;
 	bandido->next = *head;
 	*head = bandido;
