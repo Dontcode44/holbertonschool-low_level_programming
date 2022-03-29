@@ -1,4 +1,5 @@
 #include "lists.h"
+#include <stdio.h>
 
 /**
  * print_list - check the code
@@ -19,8 +20,8 @@ size_t list_len(const list_t *h)
 		{
 			printf("[%d] %s\n", h->len, h->str);
 		}
-		count++;
+		node++;
 		h = h->next;
 	}
-	return (count);
+	return (node);
 }
