@@ -4,7 +4,7 @@
  * add_nodeint_end - Function that add node at the end
  * @n: Type integer variable
  * @head: Header from struct node
- * Return:
+ * Return: NULL if failed
  */
 listint_t *add_nodeint_end(listint_t **head, const int n)
 {
