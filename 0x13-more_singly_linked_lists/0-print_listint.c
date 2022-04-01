@@ -5,7 +5,6 @@
  * @h: Pointer from structure list
  * Return: Amount of elements
  */
-
 size_t print_listint(const listint_t *h)
 {
 	size_t count = 0;
@@ -18,3 +17,4 @@ size_t print_listint(const listint_t *h)
 	}
 	return (count);
 }
+
