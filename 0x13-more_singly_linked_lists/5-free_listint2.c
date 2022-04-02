@@ -2,7 +2,7 @@
 
 /**
  * free_listint2 - Function that frees a list
- * @head: Header from list 
+ * @head: Header from list
  *Return: Success!
  */
 void free_listint2(listint_t **head)
