@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * binary_to_unit - Function that convert binary to int
+ * binary_to_uint - Function that convert binary to int
  * @b: Const char
  * Return: Success!
  */
