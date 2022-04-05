@@ -3,7 +3,7 @@
 /**
  * print_binary - Function that prints the binary
  * @n: Insigned long integer
- * @Return: Success!
+ *
  */
 void print_binary(unsigned long int n)
 {
