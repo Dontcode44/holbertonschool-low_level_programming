@@ -1,6 +1,7 @@
 #include "hash_tables.h"
 /**
  * hash_table_set - Create a new node in hash
+ * @ht: Pointer
  * @key: Key
  * @value: Value const char
  * Return: Success!!
