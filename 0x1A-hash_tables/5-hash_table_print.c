@@ -18,10 +18,10 @@ void hash_table_print(const hash_table_t *ht)
 		tmp = ht->array[i];
 		while (tmp != NULL)
 		{
-			printf("%s '%s': '%s'", div, tmp->key, tmp->value);
+			printf("%s'%s': '%s'", div, tmp->key, tmp->value);
 			div = ", ";
 			tmp = tmp->next;
 		}
-		}
+	}
 	printf("}\n");
 }
