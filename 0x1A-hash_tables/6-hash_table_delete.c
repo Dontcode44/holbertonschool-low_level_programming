@@ -2,7 +2,6 @@
 /**
  * hash_table_delete - Function that deletes hash table
  *@ht: Hash table
- *Return: Success!!
  */
 void hash_table_delete(hash_table_t *ht)
 {
