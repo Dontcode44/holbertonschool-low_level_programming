@@ -7,23 +7,23 @@
  */
 char *hash_table_get(const hash_table_t *ht, const char *key)
 {
-	char *thkey;
-	hash_node_t *tmp = NULL;
-	unsigned int head = 0;
+	hash_node_t *hash;
+	unsigned long int head;
 
-	if (ht == NULL)
+	if (ht == NULL || key == NULL)
+		return (NULL);
+	head = key_index((unsigned char *)key, ht->size);
+	if (ht->array[head] == NULL)
 		return (NULL);
 
-	thkey = strdup(key);
-	head = key_index((unsigned char *)key, ht->size);
-	tmp = ht->array[head];
-
-	while (tmp)
+	if (strcmp(ht->array[head]->key, key) == 0)
+		return (ht->array[index]->value);
+	hash = ht->array[head];
+	while (hash != NULL)
 	{
-		if (strcmp(tmp->key, thkey) == 0)
-			break;
-		tmp = tmp->next;
+		if (strcmp(hash->key, key) == 0)
+			return (hash->value);
+		hash = hash->next;
 	}
-	free(thkey);
-	return (tmp->value);
+	return (NULL);
 }
