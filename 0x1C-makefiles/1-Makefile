@@ -5,4 +5,4 @@ all: program
 
 # Compilation with variables
 program: $(SRC)
-	$(CC) $(SRC)
+	$(CC) $(SRC) -o school
