@@ -20,7 +20,7 @@ oclean: $(OBJ)
 	$(RM) -f $(OBJ)
 
 fclean:
-	$(RM) -f  *~ $(NAME)
-	$(RM) -f $(OBJ)
+	clean
+	oclean
 
 re: fclean all
