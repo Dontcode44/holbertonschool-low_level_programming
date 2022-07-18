@@ -23,4 +23,4 @@ fclean:
 	$(RM) -f  *~ $(NAME)
 	$(RM) -f $(OBJ)
 
-re: clean all
+re: fclean all
