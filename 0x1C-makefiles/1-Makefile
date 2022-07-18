@@ -1,0 +1,8 @@
+CC = gcc
+SRC = main.c school.c
+
+all: program
+
+# Compilation with variables
+program: $(SRC)
+	$(CC) $(SRC)
