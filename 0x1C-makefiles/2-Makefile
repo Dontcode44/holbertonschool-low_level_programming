@@ -1,0 +1,10 @@
+CC = gcc
+SRC = main.c school.c
+OBJ = $(SRC:.c=)
+NAME = school
+
+all: program
+
+# Compilation with variables
+program: $(OBJ)
+	$(CC) $(SRC) -o $(NAME)
