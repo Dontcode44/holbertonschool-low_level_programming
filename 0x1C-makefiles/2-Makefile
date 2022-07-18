@@ -7,7 +7,7 @@ all: program
 
 # Compilation with variables
 program: $(OBJ)
-	$(CC) $(SRC) -o $(NAME)
+	$(CC) $(OBJ) -o $(NAME)
 
 %.o: %.c
 	$(CC) -c $< -o $@
