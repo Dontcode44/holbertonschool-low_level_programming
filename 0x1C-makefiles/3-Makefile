@@ -1,0 +1,25 @@
+CC = gcc
+SRC = main.c school.c
+OBJ = $(SRC:.c=.o)
+NAME = school
+RM = rm -f
+
+all: program
+
+# Compilation with variables
+program: $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
+
+%.o: %.c
+	$(CC) -c $< -o $@
+
+clean:
+	$(RM) *~ $(NAME)
+
+oclean: main.o school.o
+	$(RM) $(OBJ)
+
+fclean:
+	$(RM) *~(NAME)
+	$(RM) $(OBJ)
+re: oclean all
