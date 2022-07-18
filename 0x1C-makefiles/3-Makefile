@@ -20,6 +20,6 @@ oclean: main.o school.o
 	$(RM) $(OBJ)
 
 fclean:
-	$(RM) *~(NAME)
+	$(RM) *~ (NAME)
 	$(RM) $(OBJ)
 re: oclean all
