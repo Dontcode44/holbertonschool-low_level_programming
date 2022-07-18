@@ -14,13 +14,13 @@ program: $(OBJ)
 	$(CC) -c $< -o $@
 
 clean:
-	$(RM) *~ $(NAME)
+	$(RM) -f *~ $(NAME)
 
 oclean: $(OBJ)
 	$(RM) -f $(OBJ)
 
 fclean:
-	clean
-	oclean
+	$(RM) -f *~ $(NAME)
+	$(RM) -f $(OBJ)
 
 re: fclean all
