@@ -1,0 +1,5 @@
+all: program
+
+# Compilation of the program
+program: main.c school.c
+	gcc main.c school.c -o school
